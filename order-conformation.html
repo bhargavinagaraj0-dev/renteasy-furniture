@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>RentEasy - Order Confirmation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+    <nav class="navbar">
+
+        <div class="logo">
+            Rent<span>Easy</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="furniture.html">Furniture</a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
+
+        </div>
+
+    </nav>
+    </header>
+
+
+    <!-- CONFIRMATION SECTION -->
+
+    <section class="confirmation-section">
+
+        <div class="confirmation-box">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>
+                Order Placed Successfully!
+            </h1>
+
+            <p>
+                Thank you for choosing RentEasy.
+            </p>
+
+            <p>
+                Your rental order has been received.
+            </p>
+
+
+            <!-- ORDER ID -->
+
+            <div class="order-id-box">
+
+                <p>Order ID</p>
+
+                <h2 id="orderId">
+                    Loading...
+                </h2>
+
+                <p id="orderDate"></p>
+
+            </div>
+
+
+            <!-- CUSTOMER DETAILS -->
+
+            <div class="confirmation-details">
+
+                <h2>Customer Details</h2>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="customerName"></span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="customerEmail"></span>
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    <span id="customerPhone"></span>
+                </p>
+
+                <p>
+                    <strong>Address:</strong>
+                    <span id="customerAddress"></span>
+                </p>
+
+                <p>
+                    <strong>Payment:</strong>
+                    <span id="paymentMethod"></span>
+                </p>
+
+            </div>
+
+
+            <!-- RENTAL ITEMS -->
+
+            <div class="confirmation-details">
+
+                <h2>Rental Items</h2>
+
+                <div id="confirmationItems">
+                </div>
+
+                <h2 class="confirmation-total">
+
+                    <span>Total:</span>
+
+                    <span id="confirmationTotal">
+                        ₹0
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="confirmation-buttons">
+
+                <a href="furniture.html"
+                   class="back-button">
+
+                    Continue Shopping
+
+                </a>
+
+                <a href="index.html"
+                   class="back-button">
+
+                    Go to Home
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 RentEasy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

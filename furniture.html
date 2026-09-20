@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furniture - RentEasy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Rent<span>Easy</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+
+            <!--<div class="cart">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </div>-->
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+               <span id="cart-count">0</span>
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Page Heading -->
+    <section class="page-heading">
+
+        <h1>Explore Our Furniture</h1>
+
+        <p>
+            Find comfortable and affordable furniture for your home.
+        </p>
+
+    </section>
+
+
+    <!-- Search and Filters -->
+    <section class="filters">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search furniture..."
+                onkeyup="filterProducts()"
+            >
+
+        </div>
+
+
+        <div class="filter-group">
+
+            <select id="categoryFilter" onchange="filterProducts()">
+
+                <option value="all">All Categories</option>
+
+                <option value="Sofa">Sofas</option>
+
+                <option value="Bed">Beds</option>
+
+                <option value="Table">Tables</option>
+
+                <option value="Chair">Chairs</option>
+
+                <option value="Wardrobe">Wardrobes</option>
+
+            </select>
+
+
+            <select id="priceFilter" onchange="filterProducts()">
+
+                <option value="all">All Prices</option>
+
+                <option value="700">Below ₹700</option>
+
+                <option value="1000">Below ₹1,000</option>
+
+                <option value="1500">Below ₹1,500</option>
+
+            </select>
+
+
+            <select id="sortFilter" onchange="sortProducts()">
+
+                <option value="default">Sort By</option>
+
+                <option value="low">Price: Low to High</option>
+
+                <option value="high">Price: High to Low</option>
+
+                <option value="name">Name: A to Z</option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section class="furniture-section">
+
+        <div id="productContainer" class="product-container">
+
+
+            <!-- Sofa -->
+            <div
+                class="product-card"
+                data-name="Modern Sofa"
+                data-category="Sofa"
+                data-price="1499"
+                onclick="openProduct('Sofa')"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="asst/sofa.jpg"
+                        alt="Modern Sofa"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Modern Sofa</h3>
+
+                    <p>
+                        Comfortable 3-seater sofa for your living room.
+                    </p>
+
+                    <h4>₹1,499 / month</h4>
+
+                    <button onclick="event.stopPropagation();addToCart('Modern Sofa', 1499)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bed -->
+            <div
+                class="product-card"
+                data-name="King Size Bed"
+                data-category="Bed"
+                data-price="1299"
+                onclick="openProduct('bed')"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="asst/bed.jpg"
+                        alt="King Size Bed"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>King Size Bed</h3>
+
+                    <p>
+                        Spacious and comfortable bed for your bedroom.
+                    </p>
+
+                    <h4>₹1,299 / month</h4>
+
+                    <button onclick=" event.stopPropagation();addToCart('King Size Bed', 1299)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Dining Table -->
+            <div
+                class="product-card"
+                data-name="Dining Table"
+                data-category="Table"
+                data-price="899"
+                onclick="openProduct('dining-table')"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="asst/dining-table.jpg"
+                        alt="Dining Table"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Dining Table</h3>
+
+                    <p>
+                        Elegant dining table for your home.
+                    </p>
+
+                    <h4>₹899 / month</h4>
+
+                    <button onclick="event.stopPropagation();addToCart('Dining Table', 899)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Office Chair -->
+            <div
+                class="product-card"
+                data-name="Office Chair"
+                data-category="Chair"
+                data-price="699"
+                onclick="openProduct('office-chair')"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="asst/office-chair.jpg"
+                        alt="Office Chair"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Office Chair</h3>
+
+                    <p>
+                        Comfortable chair for your workspace.
+                    </p>
+
+                    <h4>₹699 / month</h4>
+
+                    <button onclick="event.stopPropagation(); addToCart('Office Chair', 699)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Study Table -->
+            <div
+                class="product-card"
+                data-name="Study Table"
+                data-category="Table"
+                data-price="599"
+                onclick="openProduct('study-table')"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="asst/studytable.jpg"
+                        alt="Study Table"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Study Table</h3>
+
+                    <p>
+                        Simple and practical table for studying.
+                    </p>
+
+                    <h4>₹599 / month</h4>
+
+                    <button onclick="event.stopPropagation(); addToCart('Study Table', 599)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Wardrobe -->
+            <div
+                class="product-card"
+                data-name="Wooden Wardrobe"
+                data-category="Wardrobe"
+                data-price="999"
+                onclick="openProduct('wardrobe')"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="asst/wardboard.webp"
+                        alt="Wooden Wardrobe"
+                    >
+
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Wooden Wardrobe</h3>
+
+                    <p>
+                        Spacious wardrobe for organized storage.
+                    </p>
+
+                    <h4>₹999 / month</h4>
+
+                    <button onclick="event.stopPropagation(); addToCart('Wooden Wardrobe', 999)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- No Results -->
+        <div id="noResults">
+
+            <h3>No furniture found.</h3>
+
+            <p>Try another search or filter.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>RentEasy</h2>
+
+        <p>
+            Furniture rental made simple and affordable.
+        </p>
+
+        <p>
+            © 2026 RentEasy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

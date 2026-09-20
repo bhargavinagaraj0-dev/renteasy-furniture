@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - RentEasy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Rent<span>Easy</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+
+            <!--<div class="cart">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </div>-->
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Product Details -->
+
+    <section class="product-details">
+
+        <div class="details-image">
+
+            <img
+                id="productImage"
+                src="asst/sofa.jpg"
+                alt="Furniture"
+            >
+
+        </div>
+
+
+        <div class="details-info">
+
+            <p class="product-category">
+                Furniture Rental
+            </p>
+
+            <h1 id="productName">
+                Modern Sofa
+            </h1>
+
+            <p id="productDescription">
+                Comfortable 3-seater sofa for your living room.
+            </p>
+
+
+            <h2 id="productPrice">
+                ₹1,499 / month
+            </h2>
+
+
+            <!-- Rental Duration -->
+
+            <div class="detail-option">
+
+                <label for="rentalDuration">
+                    Rental Duration
+                </label>
+
+                <select id="rentalDuration"
+                    onchange="calculateTotal()">
+
+                    <option value="1">
+                        1 Month
+                    </option>
+
+                    <option value="3">
+                        3 Months
+                    </option>
+
+                    <option value="6">
+                        6 Months
+                    </option>
+
+                    <option value="12">
+                        12 Months
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Quantity -->
+
+            <div class="detail-option">
+
+                <label>
+                    Quantity
+                </label>
+
+                <div class="quantity">
+
+                    <button onclick="decreaseQuantity()">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button onclick="increaseQuantity()">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Total -->
+
+            <div class="total-box">
+
+                <span>Total Rental Amount</span>
+
+                <strong id="totalPrice">
+                    ₹1,499
+                </strong>
+
+            </div>
+
+
+            <button
+                class="add-cart-button"
+                onclick="addProductToCart()">
+
+                🛒 Add to Cart
+
+            </button>
+
+
+            <button
+                class="back-button"
+                onclick="window.location.href='furniture.html'">
+
+                ← Back to Furniture
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h2>RentEasy</h2>
+
+        <p>
+            Furniture rental made simple and affordable.
+        </p>
+
+        <p>
+            © 2026 RentEasy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

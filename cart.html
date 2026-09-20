@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RentEasy - Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+
+             <div class="logo">
+                Rent<span>Easy</span>
+            
+             </div>
+
+         <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="furniture.html">Furniture</a>
+            <a href="index.html#categories">Categories</a>
+            <a href="index.html#about">About</a>
+
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+
+    </nav>
+    </header>
+
+
+    <!-- CART HEADING -->
+
+    <section class="page-heading">
+
+        <h1>My Cart</h1>
+
+        <p>
+            Review your selected furniture before checkout.
+        </p>
+
+    </section>
+
+
+    <!-- CART -->
+
+    <section class="cart-section">
+
+        <div id="cartContainer">
+
+            <!-- Cart items will appear here -->
+
+        </div>
+
+
+        <!-- EMPTY CART -->
+
+        <div id="emptyCart">
+
+            <h2>Your cart is empty 🛒</h2>
+
+            <p>
+                Add some furniture to your cart first.
+            </p>
+
+            <a href="furniture.html" class="back-button">
+                Browse Furniture
+            </a>
+
+        </div>
+
+
+        <!-- CART SUMMARY -->
+
+        <div id="cartSummary" class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <p>
+                Total Amount:
+                <strong id="cartTotal">₹0</strong>
+            </p>
+
+            <button
+                class="add-cart-button"
+                onclick="proceedToCheckout()">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 RentEasy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

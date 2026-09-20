@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>RentEasy - Checkout</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+     <header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Rent <span>Easy</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="furniture.html">
+                Furniture
+            </a>
+
+            <a href="index.html#categories">
+                Categories
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
+
+        </div>
+
+    </nav>
+    </header>
+
+
+    <!-- PAGE HEADING -->
+
+    <section class="page-heading">
+
+        <h1>Checkout</h1>
+
+        <p>
+            Enter your details to complete your rental.
+        </p>
+
+    </section>
+
+
+    <!-- CHECKOUT -->
+
+    <section class="checkout-section">
+
+        <div class="checkout-form">
+
+            <h2>Customer Details</h2>
+
+
+            <form id="checkoutForm"
+                onsubmit="placeOrder(event)">
+
+                <!-- NAME -->
+
+                <label for="customerName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your full name"
+                    required>
+
+
+                <!-- EMAIL -->
+
+                <label for="customerEmail">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="customerEmail"
+                    placeholder="Enter your email"
+                    required>
+
+
+                <!-- PHONE -->
+
+                <label for="customerPhone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Enter your phone number"
+                    required>
+
+
+                <!-- ADDRESS -->
+
+                <label for="customerAddress">
+                    Delivery Address
+                </label>
+
+                <textarea
+                    id="customerAddress"
+                    placeholder="Enter your complete delivery address"
+                    rows="4"
+                    required></textarea>
+
+
+                <!-- CITY -->
+
+                <label for="customerCity">
+                    City
+                </label>
+
+                <input
+                    type="text"
+                    id="customerCity"
+                    placeholder="Enter your city"
+                    required>
+
+
+                <!-- PINCODE -->
+
+                <label for="customerPincode">
+                    Pincode
+                </label>
+
+                <input
+                    type="text"
+                    id="customerPincode"
+                    placeholder="Enter pincode"
+                    required>
+
+
+                <!-- PAYMENT -->
+
+                <label for="paymentMethod">
+                    Payment Method
+                </label>
+
+                <select id="paymentMethod" required>
+
+                    <option value="">
+                        Select Payment Method
+                    </option>
+
+                    <option value="Cash on Delivery">
+                        Cash on Delivery
+                    </option>
+
+                    <option value="UPI">
+                        UPI
+                    </option>
+
+                    <option value="Card">
+                        Debit / Credit Card
+                    </option>
+
+                </select>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="submit"
+                    class="add-cart-button">
+
+                    Place Order
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ORDER SUMMARY -->
+
+        <div class="checkout-summary">
+
+            <h2>Order Summary</h2>
+
+            <div id="checkoutItems">
+
+                <!-- Products will appear here -->
+
+            </div>
+
+            <hr>
+
+            <h3>
+                Total:
+                <span id="checkoutTotal">
+                    ₹0
+                </span>
+            </h3>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 RentEasy. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
